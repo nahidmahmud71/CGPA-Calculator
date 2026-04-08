@@ -1,14 +1,14 @@
-// RESTORED: Background Spark Generator
+// EXTREME SPARK GENERATOR (50 Sparks)
 document.addEventListener("DOMContentLoaded", () => {
     const pZone = document.getElementById('sparks');
-    for(let i=0; i<30; i++) {
+    for(let i=0; i<50; i++) {
         let p = document.createElement('div');
         p.className = 'spark';
-        p.style.width = `${Math.random() * 6 + 2}px`;
+        p.style.width = `${Math.random() * 8 + 2}px`;
         p.style.height = p.style.width;
         p.style.left = `${Math.random() * 100}vw`;
-        p.style.animationDuration = `${Math.random() * 8 + 4}s`;
-        p.style.animationDelay = `${Math.random() * 5}s`;
+        p.style.animationDuration = `${Math.random() * 5 + 3}s`;
+        p.style.animationDelay = `${Math.random() * 3}s`;
         pZone.appendChild(p);
     }
 });
@@ -56,7 +56,7 @@ function generateRows() {
     for(let i = 0; i < count; i++) {
         const row = document.createElement('div');
         row.className = 'course-row';
-        row.style.animationDelay = `${i * 0.1}s`; 
+        row.style.animationDelay = `${i * 0.05}s`; // Faster staggered animation
         row.innerHTML = createRowHTML(i + 1);
         list.appendChild(row);
     }
@@ -84,14 +84,14 @@ function addSingleCourse() {
 
 function removeRow(button) {
     const row = button.parentElement;
-    row.style.transform = 'scale(0.8) translateX(50px)';
+    row.style.transform = 'scale(0.5) rotate(-10deg) translateY(50px)';
     row.style.opacity = '0';
     setTimeout(() => { 
         row.remove(); 
         document.querySelectorAll('.course-list .cyber-input[placeholder^="Course"]').forEach((inp, idx) => {
             if(!inp.value) inp.placeholder = `Course ${idx + 1}`;
         });
-    }, 300);
+    }, 400);
 }
 
 function resetToSetup() {
@@ -143,7 +143,7 @@ function triggerCalculation() {
     btn.style.pointerEvents = "none";
     gpaElement.className = "font-code"; 
     resultBox.classList.add('processing');
-    msgElement.innerText = "ANALYZING NEURAL GRADES...";
+    msgElement.innerText = "ANALYZING QUANTUM GRADES...";
     msgElement.style.color = "var(--primary)";
 
     const finalCGPA = totalPoints / totalCredits;
@@ -164,31 +164,31 @@ function triggerCalculation() {
                 msgElement.innerText = "EXCELLENT STANDING 🌟"; 
                 msgElement.style.color = "var(--success)";
                 resultBox.style.borderColor = "var(--success)";
-                resultBox.style.boxShadow = "0 30px 60px rgba(0,0,0,0.8), inset 0 0 50px rgba(0, 255, 136, 0.2)";
+                resultBox.style.boxShadow = "0 30px 60px rgba(0,0,0,0.9), inset 0 0 60px rgba(0, 255, 136, 0.3)";
             }
             else if(finalCGPA >= 3.00) { 
                 gpaElement.classList.add('glow-good');
                 msgElement.innerText = "GOOD PERFORMANCE 🚀"; 
                 msgElement.style.color = "var(--primary)";
                 resultBox.style.borderColor = "var(--primary)";
-                resultBox.style.boxShadow = "0 30px 60px rgba(0,0,0,0.8), inset 0 0 50px rgba(0, 240, 255, 0.2)";
+                resultBox.style.boxShadow = "0 30px 60px rgba(0,0,0,0.9), inset 0 0 60px rgba(0, 240, 255, 0.3)";
             }
             else if(finalCGPA >= 2.50) { 
                 gpaElement.classList.add('glow-average');
                 msgElement.innerText = "AVERAGE STANDING ⚠️"; 
                 msgElement.style.color = "#f59e0b";
                 resultBox.style.borderColor = "#f59e0b";
-                resultBox.style.boxShadow = "0 30px 60px rgba(0,0,0,0.8), inset 0 0 50px rgba(245, 158, 11, 0.2)";
+                resultBox.style.boxShadow = "0 30px 60px rgba(0,0,0,0.9), inset 0 0 60px rgba(245, 158, 11, 0.3)";
             }
             else { 
                 gpaElement.classList.add('glow-danger');
                 msgElement.innerText = "CRITICAL WARNING 💀"; 
                 msgElement.style.color = "var(--danger)";
                 resultBox.style.borderColor = "var(--danger)";
-                resultBox.style.boxShadow = "0 30px 60px rgba(0,0,0,0.8), inset 0 0 80px rgba(255, 0, 85, 0.3)";
+                resultBox.style.boxShadow = "0 30px 60px rgba(0,0,0,0.9), inset 0 0 100px rgba(255, 0, 85, 0.4)";
             }
 
-            setTimeout(() => gpaElement.classList.remove('reveal-pop'), 1000);
+            setTimeout(() => gpaElement.classList.remove('reveal-pop'), 1200);
         });
 
     }, 1200); 
