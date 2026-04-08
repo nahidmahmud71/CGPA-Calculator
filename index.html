@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The most premium and accurate CGPA/GPA calculator for university students.">
+    <title>Premium CGPA | Intelligent Scoring System</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dynamic-universe">
+        <div class="void-bg"></div>
+        <div class="cyber-grid"></div>
+        <div class="quantum-ring ring-1"></div>
+        <div class="quantum-ring ring-2"></div>
+        <div class="floating-sparks" id="sparks"></div>
+    </div>
+
+    <div class="container">
+        <header class="app-header fade-in">
+            <div class="logo-wrap new-logo">
+                <i class="fa-solid fa-graduation-cap outer-icon"></i>
+                <i class="fa-solid fa-award inner-icon"></i>
+            </div>
+            
+            <h1 class="title-glow">PREMIUM <span class="theme-text">CGPA</span></h1>
+            <p class="font-code text-muted tracking-wide mt-5 animated-subtitle" data-text="INTELLIGENT SCORING SYSTEM">INTELLIGENT SCORING SYSTEM</p>
+        </header>
+
+        <div id="setup-phase" class="setup-container glass-heavy slide-up highlight-pulse">
+            <div class="attention-badge"><i class="fa-solid fa-bell"></i> ACTION REQUIRED</div>
+            <h2 class="font-heading mb-10" style="font-size: 2.2rem; color: #fff;">How Many Courses?</h2>
+            <p class="text-muted mb-30 font-code" style="font-size: 1.1rem;">Enter total courses to generate the calculator.</p>
+            
+            <div class="input-group">
+                <input type="number" id="course-count-input" class="cyber-input text-center big-input" min="1" max="15" placeholder="e.g. 5">
+                <button class="btn-calculate" onclick="generateRows()">
+                    <i class="fa-solid fa-power-off"></i> START
+                </button>
+            </div>
+            <p id="setup-error" class="text-danger mt-15 hidden font-code">Please enter a valid number (1-15).</p>
+        </div>
+
+        <main class="calculator-layout hidden" id="calculator-core">
+            
+            <section class="input-section glass-panel slide-up">
+                <div class="section-title">
+                    <h2><i class="fa-solid fa-server theme-text"></i> Data Input</h2>
+                    <button class="btn-icon" onclick="resetToSetup()" title="Start Over"><i class="fa-solid fa-power-off"></i></button>
+                </div>
+                
+                <div class="course-list" id="course-list">
+                    </div>
+
+                <div class="action-buttons mt-30">
+                    <button class="btn-outline" onclick="addSingleCourse()">
+                        <i class="fa-solid fa-plus"></i> ADD COURSE
+                    </button>
+                    <button class="btn-calculate" onclick="triggerCalculation()">
+                        <i class="fa-solid fa-bolt"></i> CALCULATE CGPA
+                    </button>
+                </div>
+            </section>
+
+            <section class="result-section glass-heavy slide-up-delay" id="result-box">
+                <div class="result-card">
+                    <h3 class="font-code text-muted">FINAL RESULT</h3>
+                    <div class="gpa-display">
+                        <span id="final-gpa" class="font-code">0.00</span>
+                    </div>
+                    <p id="gpa-message" class="gpa-msg">SYSTEM STANDBY</p>
+                </div>
+
+                <div class="stats-grid mt-40">
+                    <div class="stat-box">
+                        <i class="fa-solid fa-layer-group theme-text"></i>
+                        <h4>TOTAL CREDITS</h4>
+                        <span id="total-credits" class="font-code">0.0</span>
+                    </div>
+                    <div class="stat-box">
+                        <i class="fa-solid fa-star theme-text"></i>
+                        <h4>TOTAL POINTS</h4>
+                        <span id="total-points" class="font-code">0.00</span>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
