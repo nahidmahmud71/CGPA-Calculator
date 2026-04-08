@@ -6,8 +6,8 @@
     
     <meta name="google-site-verification" content="U2nyKzKWmKKXSXaAYplX1QY_It5NMn2QC6vD54-AQRA" />
     
-    <meta name="description" content="The most premium and accurate CGPA/GPA calculator for university students.">
-    <title>Premium CGPA | Intelligent Scoring System</title>
+    <meta name="description" content="The most advanced Quantum CGPA/GPA calculator for university students.">
+    <title>Quantum CGPA | Intelligent Scoring System</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,6 +17,7 @@
 
     <div class="dynamic-universe">
         <div class="void-bg"></div>
+        <div class="glowing-orb"></div>
         <div class="cyber-grid"></div>
         <div class="quantum-ring ring-1"></div>
         <div class="quantum-ring ring-2"></div>
@@ -30,14 +31,14 @@
                 <i class="fa-solid fa-award inner-icon"></i>
             </div>
             
-            <h1 class="title-glow">PREMIUM <span class="theme-text">CGPA</span></h1>
-            <p class="font-code text-muted tracking-wide mt-5 animated-subtitle" data-text="INTELLIGENT SCORING SYSTEM">INTELLIGENT SCORING SYSTEM</p>
+            <h1 class="title-glow">QUANTUM <span class="theme-text">CGPA</span></h1>
+            <p class="font-code text-muted tracking-wide animated-subtitle" data-text="INTELLIGENT SCORING SYSTEM">INTELLIGENT SCORING SYSTEM</p>
         </header>
 
         <div id="setup-phase" class="setup-container glass-heavy slide-up highlight-pulse">
-            <div class="attention-badge"><i class="fa-solid fa-bell"></i> ACTION REQUIRED</div>
-            <h2 class="font-heading mb-10" style="font-size: 2.2rem; color: #fff;">How Many Courses?</h2>
-            <p class="text-muted mb-30 font-code" style="font-size: 1.1rem;">Enter total courses to generate the calculator.</p>
+            <div class="attention-badge"><i class="fa-solid fa-bell fa-shake"></i> ACTION REQUIRED</div>
+            <h2 class="font-heading mb-10" style="font-size: 2rem; color: #fff;">How Many Courses?</h2>
+            <p class="text-muted mb-20 font-code" style="font-size: 1rem;">Initialize the quantum calculator engine.</p>
             
             <div class="input-group">
                 <input type="number" id="course-count-input" class="cyber-input text-center big-input" min="1" max="15" placeholder="e.g. 5">
@@ -52,14 +53,14 @@
             
             <section class="input-section glass-panel slide-up">
                 <div class="section-title">
-                    <h2><i class="fa-solid fa-server theme-text"></i> Data Input</h2>
+                    <h2><i class="fa-solid fa-server theme-text fa-pulse"></i> Data Input</h2>
                     <button class="btn-icon" onclick="resetToSetup()" title="Start Over"><i class="fa-solid fa-power-off"></i></button>
                 </div>
                 
                 <div class="course-list" id="course-list">
                     </div>
 
-                <div class="action-buttons mt-30">
+                <div class="action-buttons mt-20">
                     <button class="btn-outline" onclick="addSingleCourse()">
                         <i class="fa-solid fa-plus"></i> ADD COURSE
                     </button>
@@ -78,13 +79,13 @@
                     <p id="gpa-message" class="gpa-msg">SYSTEM STANDBY</p>
                 </div>
 
-                <div class="stats-grid mt-40">
-                    <div class="stat-box">
+                <div class="stats-grid mt-30">
+                    <div class="stat-box floating-box-1">
                         <i class="fa-solid fa-layer-group theme-text"></i>
                         <h4>TOTAL CREDITS</h4>
                         <span id="total-credits" class="font-code">0.0</span>
                     </div>
-                    <div class="stat-box">
+                    <div class="stat-box floating-box-2">
                         <i class="fa-solid fa-star theme-text"></i>
                         <h4>TOTAL POINTS</h4>
                         <span id="total-points" class="font-code">0.00</span>
